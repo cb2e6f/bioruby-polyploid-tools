@@ -25,11 +25,23 @@ module Bio::PolyploidTools
 
     #Returns the sequence for a region in the gene models (exon)
     def gene_model_sequence(region)
-      #puts "Region: "
-      #puts region.inspect
+      puts "1------"
+      puts "Region: "
+      puts region.inspect
+      puts "2------"
+
       target_reg = @gene_models_db.index.region_for_entry(region.entry)
-      #puts target_reg.inspect
+
+      puts "3------"
+
+      puts target_reg.inspect
+
+      puts "4------"
+
       region.end = target_reg.length if region.end > target_reg.length
+
+      puts "5------"
+
       #entries[region.entry]
 
       seq=@gene_models_db.fetch_sequence(region)

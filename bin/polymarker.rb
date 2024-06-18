@@ -57,7 +57,7 @@ options[:primer_3_preferences] = {
 OptionParser.new do |opts|
   opts.banner = "Usage: polymarker.rb [options]"
 
-  opts.on("-c", "--contigs FILE", "File with contigs to use as datablase") do |o|
+  opts.on("-c", "--contigs FILE", "File with contigs to use as database") do |o|
     options[:path_to_contigs] = o
   end
   
